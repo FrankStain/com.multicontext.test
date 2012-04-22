@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#arm-linux-androideabi-addr2line.exe -C -f -s -i -e ../libs/armeabi-v7a/libnt-core.so $1
+
+echo "libnt-core.so trace :: "
+grep -E "#[0-9]{2}[ ]+pc[ ]+([0-9a-f]{8})" $1 | sed -r "s/.+#[0-9]{2}[ ]+pc[ ]+([0-9a-f]{8}).+/\1/" | arm-linux-androideabi-addr2line.exe -C -f -i -e ../libs/armeabi-v7a/libnt-core.so
+#echo ""
+#echo "libdvm.so trace :: "
+#grep -E "#[0-9]{2}[ ]+pc[ ]+([0-9a-f]{8})" $1 | sed -r "s/.+#[0-9]{2}[ ]+pc[ ]+([0-9a-f]{8}).+/\1/" | arm-linux-androideabi-addr2line.exe -C -f -i -e $ANDROID_NDK_ROOT/platforms/android-9/arch-arm/usr/lib/libdvm.so
+#echo ""
+#echo "libc.so trace :: "
+#grep -E "#[0-9]{2}[ ]+pc[ ]+([0-9a-f]{8})" $1 | sed -r "s/.+#[0-9]{2}[ ]+pc[ ]+([0-9a-f]{8}).+/\1/" | arm-linux-androideabi-addr2line.exe -C -f -i -e $ANDROID_NDK_ROOT/platforms/android-9/arch-arm/usr/lib/libc.so
