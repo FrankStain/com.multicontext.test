@@ -1,4 +1,4 @@
-#include "cNaiveThread.h"
+#include "cNativeThread.h"
 #include "logs.h"
 #include <list>
 #include <algorithm>
