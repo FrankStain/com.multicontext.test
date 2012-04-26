@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <string>
 
-extern char LOG_TAG[];
+extern const char LOG_TAG[];
 
 static void android_trace_log( const int type, const char* func, const int line, const char* msg, ... )
 {

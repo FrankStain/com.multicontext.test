@@ -28,7 +28,7 @@ public:
 	void run();
 	void stop();
 
-	const bool is_created() const { return NULL != m_tid; };
+	const bool is_created() const { return 0 != m_tid; };
 	const bool is_running() const { return m_running; };
 	const bool is_terminated() const { return m_terminated; };
 	const bool is_self() const { return current_thread_id() == m_tid; };

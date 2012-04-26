@@ -54,5 +54,17 @@ public:
 	void notify_all() { pthread_cond_broadcast( &m_cond ); };
 };
 
-typedef cNativeCS		cCritSection;
-typedef cNativeMonitor	cMonitor;
+class cNativeMutexLock
+{
+private:
+	cNativeMutex*	m_cs;
+
+public:
+	cNativeMutexLock( cNativeMutex& cs ): m_cs(&cs) { if( m_cs ){ m_cs->enter(); }; };
+	virtual ~cNativeMutexLock() { if( m_cs ){ m_cs->exit(); }; };
+
+};
+
+typedef cNativeCS			cCritSection;
+typedef cNativeMonitor		cMonitor;
+typedef cNativeMutexLock	cCSLock

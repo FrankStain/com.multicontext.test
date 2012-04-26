@@ -27,7 +27,7 @@ namespace thread_manager {
 	thread_list_t	g_threads;
 };
 
-cNativeThread::cNativeThread(): m_tid(NULL), m_running(false), m_terminated(false) {
+cNativeThread::cNativeThread() : m_tid(NULL), m_running(false), m_terminated(false) {
 	LOG_PTH_START();
 	thread_manager::g_threads.push_back( this );
 	LOG_PTH_END();
