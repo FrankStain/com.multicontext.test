@@ -67,4 +67,4 @@ public:
 
 typedef cNativeCS			cCritSection;
 typedef cNativeMonitor		cMonitor;
-typedef cNativeMutexLock	cCSLock
+typedef cNativeMutexLock	cCSLock;

@@ -18,14 +18,38 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE			:= nt-core
 LOCAL_C_INCLUDES		:= $(LOCAL_PATH)/include $(LOCAL_PATH)/source
-LOCAL_SRC_FILES			:= source/cNativeApplication.cpp source/cNativeThread.cpp source/main.cpp
+
+LOCAL_CPPFLAGS			:=			\
+	-DANDROID_NDK					\
+	-D__ANDROID__					\
+	-D_REENTRANT					\
+	-D_STLP_USE_NEWALLOC			\
+	-D_THREAD_SAFE					\
+	-D_POSIX_THREADS				\
+	-DENABLE_ACTIVITY_LOGS			\
+	-DENABLE_THREAD_LOGS			\
+	-DUSE_GRAPHICS_LOGS				\
+	-DUSE_GRAPHICS_BUFFERS_LOGS		\
+
+# Build switchers :
+#
+#	Enable second (storage) context and use it in separate thread to prepare VBO && IBO
+#	-DUSE_MULTICONTEXT				\
+#
+#	Use selected IBO instead of IBO direct memory (DMA) pointer
+#	-DUSE_SELECT_IBO				\
+
+LOCAL_SRC_FILES			:=			\
+	source/cIndexBuffer.cpp			\
+	source/cVertexBuffer.cpp		\
+	source/cConfigurator.cpp		\
+	source/cGraphics.cpp			\
+	source/cNativeApplication.cpp	\
+	source/cNativeThread.cpp		\
+	source/main.cpp					\
+
 LOCAL_LDLIBS			:= -llog -landroid -lEGL -lGLESv1_CM
 LOCAL_STATIC_LIBRARIES	:= android_native_app_glue
-LOCAL_CPPFLAGS			:=								\
-	-DANDROID_NDK										\
-	-D__ANDROID__										\
-	-DENABLE_ACTIVITY_LOGS								\
-	-DENABLE_THREAD_LOGS								\
 
 include $(BUILD_SHARED_LIBRARY)
 

@@ -6,7 +6,7 @@
 #include <GLES/glext.h>
 #include <pthread.h>
 #include <android/native_window.h>
-#include "cNativeThreadCS.h"
+#include "cNativeMutex.h"
 #include "logs.h"
 
 class cGraphics
