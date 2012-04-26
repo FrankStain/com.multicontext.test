@@ -137,14 +137,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\cNaiveThread.h" />
-    <ClInclude Include="include\cNativeActivity.h" />
+    <ClInclude Include="include\cConfigurator.h" />
+    <ClInclude Include="include\cGraphics.h" />
+    <ClInclude Include="include\cIndexBuffer.h" />
+    <ClInclude Include="include\cNativeApplication.h" />
     <ClInclude Include="include\cNativeMutex.h" />
+    <ClInclude Include="include\cNativeThread.h" />
+    <ClInclude Include="include\cVertexBuffer.h" />
     <ClInclude Include="include\logs.h" />
     <ClInclude Include="source\main.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\cConfigurator.cpp" />
+    <ClCompile Include="source\cGraphics.cpp" />
+    <ClCompile Include="source\cIndexBuffer.cpp" />
+    <ClCompile Include="source\cNativeApplication.cpp" />
     <ClCompile Include="source\cNativeThread.cpp" />
+    <ClCompile Include="source\cVertexBuffer.cpp" />
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

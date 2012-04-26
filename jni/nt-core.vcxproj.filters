@@ -18,16 +18,28 @@
     <ClInclude Include="include\logs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\cNativeActivity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\cNaiveThread.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\cNativeMutex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cNativeThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cNativeApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\main.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cVertexBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cConfigurator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cGraphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cIndexBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -36,6 +48,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\cNativeThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\cNativeApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\cConfigurator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\cGraphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\cIndexBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\cVertexBuffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
