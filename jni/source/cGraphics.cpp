@@ -154,7 +154,7 @@ const bool cGraphics::init(){
 
 #ifdef USE_MULTICONTEXT
 	G_LOG_I( "try to create storage context" );
-	m_storage.m_context = eglCreateContext( m_display, m_storage.m_config, m_render.m_context, NULL );
+	m_storage.m_context = eglCreateContext( m_display, m_storage.m_config, m_render.m_context, context_attr );
 	if( EGL_NO_CONTEXT == m_render.m_context ){
 		G_LOG_E( "eglCreateContext() failed with code : 0x%08X", eglGetError() );
 		return false;

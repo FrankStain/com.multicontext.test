@@ -11,7 +11,7 @@ By default project will be built with single EGL context, with single-thread loa
 If you want to use IBO selection instead DMA pointers, you need to include 'USE_SELECT_IBO' macro to the 'LOCAL_CPPFLAGS' in 'Android.mk'.
 If you want to use multiple EGL contexts and data loading in a separate thread (which use second context), you need to include 'USE_MULTICONTEXT' macro to the 'LOCAL_CPPFLAGS' in 'Android.mk'.
 
-Links to issues, when you can discuss problems and example :
+Links to issues, where you can discuss problems from this example :
 (glDrawElements() cause SIGSEGV when used with IBO and offset 'indices' pointer on Adreno GPU's)
 https://groups.google.com/d/topic/android-platform/Az1Wb3vK1N8/discussion
 
