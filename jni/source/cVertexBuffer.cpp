@@ -96,8 +96,6 @@ void cVertexBuffer::resize( const uint32_t size ){
 };
 
 void* cVertexBuffer::lock( uint32_t offset, uint32_t size, const bool only_write ){
-	offset *= m_stride;
-
 	if( m_size <= offset ){
 		return NULL;
 	};
@@ -122,7 +120,7 @@ void* cVertexBuffer::lock( uint32_t offset, uint32_t size, const bool only_write
 		m_dma_lock = true;
 	};
 
-	return ( ptr )? &ptr[ offset ] : NULL;
+	return ( ptr )? &ptr[ offset * m_stride ] : NULL;
 };
 
 void cVertexBuffer::unlock(){
